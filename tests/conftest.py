@@ -23,6 +23,21 @@ from medsbom.core.models import (
 SAMPLE_DATA_DIR = Path(__file__).parent / "sample_data"
 
 
+@pytest.fixture(autouse=True)
+def _block_network(monkeypatch):
+    """Block all real HTTP requests in tests — no test should hit the network."""
+    import httpx
+
+    def _raise(*args, **kwargs):
+        raise RuntimeError(
+            "Tests must not make real HTTP requests! "
+            "Mock httpx.Client or the calling module."
+        )
+
+    monkeypatch.setattr(httpx, "Client", _raise)
+    monkeypatch.setattr(httpx, "AsyncClient", _raise)
+
+
 @pytest.fixture
 def sample_cyclonedx_path() -> Path:
     return SAMPLE_DATA_DIR / "sample_cyclonedx.json"
