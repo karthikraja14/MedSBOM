@@ -5,10 +5,30 @@
 
 from __future__ import annotations
 
+from unittest.mock import MagicMock, patch
+
 import pytest
 from fastapi.testclient import TestClient
 
 from medsbom.api.main import _scans, app
+
+
+@pytest.fixture(autouse=True)
+def mock_network():
+    """Mock all external network calls in the API layer."""
+    with (
+        patch("medsbom.api.main.CVEMatcher") as mock_cve,
+        patch("medsbom.api.main.EOLChecker") as mock_eol,
+    ):
+        matcher = MagicMock()
+        matcher.match_component.return_value = []
+        mock_cve.return_value = matcher
+
+        checker = MagicMock()
+        checker.check_component.return_value = MagicMock(eol_date=None, is_eol=False)
+        mock_eol.return_value = checker
+
+        yield
 
 
 @pytest.fixture
