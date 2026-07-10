@@ -1,0 +1,91 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "imaging-software-sbom",
+  "documentNamespace": "https://example.com/imaging-software-1.0",
+  "creationInfo": {
+    "created": "2026-07-10T12:00:00Z",
+    "creators": [
+      "Tool: trivy-0.52.0",
+      "Organization: MedDevice Corp"
+    ]
+  },
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Package-openssl",
+      "name": "openssl",
+      "versionInfo": "3.0.13",
+      "supplier": "Organization: OpenSSL Project",
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "downloadLocation": "https://www.openssl.org/source/",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/openssl@3.0.13"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-nodejs",
+      "name": "nodejs",
+      "versionInfo": "18.20.3",
+      "supplier": "Organization: Node.js Foundation",
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "downloadLocation": "https://nodejs.org/",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/nodejs@18.20.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-express",
+      "name": "express",
+      "versionInfo": "4.19.2",
+      "licenseConcluded": "MIT",
+      "downloadLocation": "https://www.npmjs.com/package/express",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/express@4.19.2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-lodash",
+      "name": "lodash",
+      "versionInfo": "4.17.21",
+      "licenseConcluded": "MIT",
+      "downloadLocation": "https://www.npmjs.com/package/lodash",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lodash@4.17.21"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-ubuntu",
+      "name": "ubuntu",
+      "versionInfo": "22.04",
+      "supplier": "Organization: Canonical",
+      "licenseConcluded": "NOASSERTION",
+      "downloadLocation": "https://ubuntu.com/",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/ubuntu@22.04"
+        }
+      ]
+    }
+  ]
+}

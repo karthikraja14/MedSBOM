@@ -1,0 +1,16 @@
+services:
+  medsbom-api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: api
+    ports:
+      - "8000:8000"
+    environment:
+      - NVD_API_KEY=${NVD_API_KEY:-}
+    volumes:
+      - medsbom-data:/home/medsbom/.medsbom
+    restart: unless-stopped
+
+volumes:
+  medsbom-data:

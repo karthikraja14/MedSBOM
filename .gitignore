@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+.coverage
+htmlcov/
+coverage.xml
+.pytest_cache/
+
+# MedSBOM runtime
+.medsbom/
+medsbom-reports/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
