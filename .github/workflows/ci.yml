@@ -24,15 +24,10 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libffi-dev libcairo2
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -e ".[dev,pdf]"
+          pip install -e ".[dev]"
 
       - name: Lint with ruff
         run: python -m ruff check medsbom/ tests/
@@ -42,13 +37,9 @@ jobs:
         continue-on-error: true
 
       - name: Run tests
-        run: python -m pytest tests/ -v --cov=medsbom --cov-report=xml --cov-report=term-missing
-
-      - name: Upload coverage
-        uses: codecov/codecov-action@v4
-        with:
-          file: ./coverage.xml
-        if: github.event_name == 'push'
+        run: python -m pytest tests/ -v --cov=medsbom --cov-report=term-missing
+        env:
+          COVERAGE_CORE: sysmon
 
   docker:
     runs-on: ubuntu-latest
@@ -59,7 +50,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build Docker image
-        run: docker build -t medsbom:latest -f docker/Dockerfile .
+        run: docker build -t medsbom:latest --target base -f docker/Dockerfile .
 
       - name: Test Docker CLI
         run: docker run --rm medsbom:latest version

@@ -6,12 +6,6 @@ LABEL license="Apache-2.0"
 
 WORKDIR /app
 
-# Install system deps for WeasyPrint PDF generation
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 \
-    libffi-dev libcairo2 && \
-    rm -rf /var/lib/apt/lists/*
-
 COPY pyproject.toml README.md LICENSE ./
 COPY medsbom/ ./medsbom/
 
@@ -25,7 +19,17 @@ USER medsbom
 ENTRYPOINT ["medsbom"]
 CMD ["--help"]
 
-# API mode: docker run medsbom-api --api
+# Full image with PDF support
+FROM base AS pdf
+USER root
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 \
+    libffi-dev libcairo2 && \
+    rm -rf /var/lib/apt/lists/* && \
+    pip install --no-cache-dir "weasyprint>=62,<70"
+USER medsbom
+
+# API mode
 FROM base AS api
 EXPOSE 8000
 CMD ["uvicorn", "medsbom.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
