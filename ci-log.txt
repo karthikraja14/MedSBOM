@@ -1,0 +1,655 @@
+﻿ï»¿2026-07-10T13:27:13.9707662Z Current runner version: '2.335.1'
+2026-07-10T13:27:13.9728626Z ##[group]Runner Image Provisioner
+2026-07-10T13:27:13.9729323Z Hosted Compute Agent
+2026-07-10T13:27:13.9729792Z Version: 20260624.560
+2026-07-10T13:27:13.9730365Z Commit: 925d229a51159bc391ae97e54a2dd1fe20af789d
+2026-07-10T13:27:13.9730948Z Build Date: 2026-06-24T18:26:47Z
+2026-07-10T13:27:13.9731563Z Worker ID: {b1ca78f1-508d-44b0-aa9b-bc5d405160b1}
+2026-07-10T13:27:13.9732152Z Azure Region: westus3
+2026-07-10T13:27:13.9732618Z ##[endgroup]
+2026-07-10T13:27:13.9733732Z ##[group]Operating System
+2026-07-10T13:27:13.9734364Z Ubuntu
+2026-07-10T13:27:13.9734944Z 24.04.4
+2026-07-10T13:27:13.9735440Z LTS
+2026-07-10T13:27:13.9735853Z ##[endgroup]
+2026-07-10T13:27:13.9736326Z ##[group]Runner Image
+2026-07-10T13:27:13.9736832Z Image: ubuntu-24.04
+2026-07-10T13:27:13.9737310Z Version: 20260705.232.1
+2026-07-10T13:27:13.9738369Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260705.232/images/ubuntu/Ubuntu2404-Readme.md
+2026-07-10T13:27:13.9739599Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260705.232
+2026-07-10T13:27:13.9740423Z ##[endgroup]
+2026-07-10T13:27:13.9741599Z ##[group]GITHUB_TOKEN Permissions
+2026-07-10T13:27:13.9743430Z Contents: read
+2026-07-10T13:27:13.9744032Z Metadata: read
+2026-07-10T13:27:13.9744543Z ##[endgroup]
+2026-07-10T13:27:13.9746214Z Secret source: Actions
+2026-07-10T13:27:13.9746816Z Prepare workflow directory
+2026-07-10T13:27:14.0028844Z Prepare all required actions
+2026-07-10T13:27:14.0073066Z Getting action download info
+2026-07-10T13:27:14.3172719Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-07-10T13:27:14.5099783Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-07-10T13:27:14.7414294Z Complete job name: test (3.12)
+2026-07-10T13:27:14.7942500Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-10T13:27:14.7949660Z ##[group]Run actions/checkout@v4
+2026-07-10T13:27:14.7950212Z with:
+2026-07-10T13:27:14.7950563Z   repository: karthikraja14/MedSBOM
+2026-07-10T13:27:14.7954020Z   token: ***
+2026-07-10T13:27:14.7954379Z   ssh-strict: true
+2026-07-10T13:27:14.7954737Z   ssh-user: git
+2026-07-10T13:27:14.7955098Z   persist-credentials: true
+2026-07-10T13:27:14.7955503Z   clean: true
+2026-07-10T13:27:14.7955865Z   sparse-checkout-cone-mode: true
+2026-07-10T13:27:14.7956287Z   fetch-depth: 1
+2026-07-10T13:27:14.7956640Z   fetch-tags: false
+2026-07-10T13:27:14.7957000Z   show-progress: true
+2026-07-10T13:27:14.7957359Z   lfs: false
+2026-07-10T13:27:14.7957735Z   submodules: false
+2026-07-10T13:27:14.7958096Z   set-safe-directory: true
+2026-07-10T13:27:14.7958631Z ##[endgroup]
+2026-07-10T13:27:14.8744580Z Syncing repository: karthikraja14/MedSBOM
+2026-07-10T13:27:14.8746623Z ##[group]Getting Git version info
+2026-07-10T13:27:14.8747471Z Working directory is '/home/runner/work/MedSBOM/MedSBOM'
+2026-07-10T13:27:14.8748759Z [command]/usr/bin/git version
+2026-07-10T13:27:15.1000748Z git version 2.54.0
+2026-07-10T13:27:15.1016809Z ##[endgroup]
+2026-07-10T13:27:15.1029243Z Temporarily overriding HOME='/home/runner/work/_temp/0cfd0469-c477-456a-a03c-404ddfa0cfde' before making global git config changes
+2026-07-10T13:27:15.1031019Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-10T13:27:15.1034157Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MedSBOM/MedSBOM
+2026-07-10T13:27:15.1067424Z Deleting the contents of '/home/runner/work/MedSBOM/MedSBOM'
+2026-07-10T13:27:15.1070790Z ##[group]Initializing the repository
+2026-07-10T13:27:15.1082035Z [command]/usr/bin/git init /home/runner/work/MedSBOM/MedSBOM
+2026-07-10T13:27:15.1156961Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-07-10T13:27:15.1158417Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-07-10T13:27:15.1159448Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-07-10T13:27:15.1160037Z hint: call:
+2026-07-10T13:27:15.1160392Z hint:
+2026-07-10T13:27:15.1160806Z hint: 	git config --global init.defaultBranch <name>
+2026-07-10T13:27:15.1161403Z hint:
+2026-07-10T13:27:15.1162083Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-07-10T13:27:15.1162820Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-07-10T13:27:15.1163392Z hint:
+2026-07-10T13:27:15.1163718Z hint: 	git branch -m <name>
+2026-07-10T13:27:15.1164363Z hint:
+2026-07-10T13:27:15.1164903Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-07-10T13:27:15.1165911Z Initialized empty Git repository in /home/runner/work/MedSBOM/MedSBOM/.git/
+2026-07-10T13:27:15.1167270Z [command]/usr/bin/git remote add origin https://github.com/karthikraja14/MedSBOM
+2026-07-10T13:27:15.1226229Z ##[endgroup]
+2026-07-10T13:27:15.1226864Z ##[group]Disabling automatic garbage collection
+2026-07-10T13:27:15.1228825Z [command]/usr/bin/git config --local gc.auto 0
+2026-07-10T13:27:15.1256117Z ##[endgroup]
+2026-07-10T13:27:15.1256719Z ##[group]Setting up auth
+2026-07-10T13:27:15.1261026Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-10T13:27:15.1289341Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-10T13:27:15.1777822Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-10T13:27:15.1808928Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-10T13:27:15.1991585Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-10T13:27:15.2021611Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-10T13:27:15.2205794Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-07-10T13:27:15.2237145Z ##[endgroup]
+2026-07-10T13:27:15.2238139Z ##[group]Fetching the repository
+2026-07-10T13:27:15.2245584Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7c0a3cc81c7cfaefdacb5349756e946b3e72410a:refs/remotes/origin/main
+2026-07-10T13:27:16.0888777Z From https://github.com/karthikraja14/MedSBOM
+2026-07-10T13:27:16.0890792Z  * [new ref]         7c0a3cc81c7cfaefdacb5349756e946b3e72410a -> origin/main
+2026-07-10T13:27:16.0910908Z ##[endgroup]
+2026-07-10T13:27:16.0911982Z ##[group]Determining the checkout info
+2026-07-10T13:27:16.0913237Z ##[endgroup]
+2026-07-10T13:27:16.0918461Z [command]/usr/bin/git sparse-checkout disable
+2026-07-10T13:27:16.0954763Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-07-10T13:27:16.0982267Z ##[group]Checking out the ref
+2026-07-10T13:27:16.0985889Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-07-10T13:27:16.1053677Z Switched to a new branch 'main'
+2026-07-10T13:27:16.1055668Z branch 'main' set up to track 'origin/main'.
+2026-07-10T13:27:16.1095757Z ##[endgroup]
+2026-07-10T13:27:16.1098108Z [command]/usr/bin/git log -1 --format=%H
+2026-07-10T13:27:16.1123398Z 7c0a3cc81c7cfaefdacb5349756e946b3e72410a
+2026-07-10T13:27:16.1403117Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-10T13:27:16.1407897Z ##[group]Run actions/setup-python@v5
+2026-07-10T13:27:16.1408596Z with:
+2026-07-10T13:27:16.1409071Z   python-version: 3.12
+2026-07-10T13:27:16.1409653Z   check-latest: false
+2026-07-10T13:27:16.1417191Z   token: ***
+2026-07-10T13:27:16.1417721Z   update-environment: true
+2026-07-10T13:27:16.1418351Z   allow-prereleases: false
+2026-07-10T13:27:16.1418966Z   freethreaded: false
+2026-07-10T13:27:16.1419507Z ##[endgroup]
+2026-07-10T13:27:16.2455877Z ##[group]Installed versions
+2026-07-10T13:27:16.3346587Z (node:2072) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-10T13:27:16.3349455Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-10T13:27:16.3351010Z Successfully set up CPython (3.12.13)
+2026-07-10T13:27:16.3352507Z ##[endgroup]
+2026-07-10T13:27:16.3510586Z ##[group]Run python -m pip install --upgrade pip
+2026-07-10T13:27:16.3511633Z [36;1mpython -m pip install --upgrade pip[0m
+2026-07-10T13:27:16.3512426Z [36;1mpip install -e ".[dev]"[0m
+2026-07-10T13:27:16.3513066Z [36;1mpip list[0m
+2026-07-10T13:27:16.3902506Z shell: /usr/bin/bash -e {0}
+2026-07-10T13:27:16.3903205Z env:
+2026-07-10T13:27:16.3904096Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-10T13:27:16.3905302Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-07-10T13:27:16.3906457Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-10T13:27:16.3907478Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-10T13:27:16.3908522Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-10T13:27:16.3909566Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-07-10T13:27:16.3910455Z ##[endgroup]
+2026-07-10T13:27:22.0336040Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages (26.1.2)
+2026-07-10T13:27:23.1978239Z Obtaining file:///home/runner/work/MedSBOM/MedSBOM
+2026-07-10T13:27:23.1993059Z   Installing build dependencies: started
+2026-07-10T13:27:24.9878017Z   Installing build dependencies: finished with status 'done'
+2026-07-10T13:27:24.9882901Z   Checking if build backend supports build_editable: started
+2026-07-10T13:27:25.0366225Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-07-10T13:27:25.0377614Z   Getting requirements to build editable: started
+2026-07-10T13:27:25.1582133Z   Getting requirements to build editable: finished with status 'done'
+2026-07-10T13:27:25.1591857Z   Installing backend dependencies: started
+2026-07-10T13:27:26.1230178Z   Installing backend dependencies: finished with status 'done'
+2026-07-10T13:27:26.1235751Z   Preparing editable metadata (pyproject.toml): started
+2026-07-10T13:27:26.5638707Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-07-10T13:27:26.6668640Z Collecting fastapi<1.0,>=0.111 (from medsbom==0.1.0)
+2026-07-10T13:27:26.7227559Z   Downloading fastapi-0.139.0-py3-none-any.whl.metadata (26 kB)
+2026-07-10T13:27:26.7515210Z Collecting httpx<1.0,>=0.27 (from medsbom==0.1.0)
+2026-07-10T13:27:26.7605426Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-07-10T13:27:26.7801009Z Collecting jinja2<4.0,>=3.1 (from medsbom==0.1.0)
+2026-07-10T13:27:26.7891543Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-07-10T13:27:26.8956746Z Collecting pydantic<3.0,>=2.7 (from medsbom==0.1.0)
+2026-07-10T13:27:26.9048560Z   Downloading pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
+2026-07-10T13:27:26.9477561Z Collecting rich<14.0,>=13.0 (from medsbom==0.1.0)
+2026-07-10T13:27:26.9569742Z   Downloading rich-13.9.4-py3-none-any.whl.metadata (18 kB)
+2026-07-10T13:27:26.9802921Z Collecting typer<1.0,>=0.12 (from medsbom==0.1.0)
+2026-07-10T13:27:26.9894208Z   Downloading typer-0.26.8-py3-none-any.whl.metadata (15 kB)
+2026-07-10T13:27:27.0174040Z Collecting uvicorn<1.0,>=0.30 (from uvicorn[standard]<1.0,>=0.30->medsbom==0.1.0)
+2026-07-10T13:27:27.0281625Z   Downloading uvicorn-0.51.0-py3-none-any.whl.metadata (6.6 kB)
+2026-07-10T13:27:27.1520458Z Collecting mypy<2.0,>=1.10 (from medsbom==0.1.0)
+2026-07-10T13:27:27.1627863Z   Downloading mypy-1.20.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-07-10T13:27:27.1847815Z Collecting pytest-asyncio<1.0,>=0.23 (from medsbom==0.1.0)
+2026-07-10T13:27:27.1940853Z   Downloading pytest_asyncio-0.26.0-py3-none-any.whl.metadata (4.0 kB)
+2026-07-10T13:27:27.2162998Z Collecting pytest-cov<6.0,>=5.0 (from medsbom==0.1.0)
+2026-07-10T13:27:27.2258040Z   Downloading pytest_cov-5.0.0-py3-none-any.whl.metadata (27 kB)
+2026-07-10T13:27:27.2608625Z Collecting pytest<9.0,>=8.0 (from medsbom==0.1.0)
+2026-07-10T13:27:27.2701566Z   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+2026-07-10T13:27:27.2890052Z Collecting respx<1.0,>=0.21 (from medsbom==0.1.0)
+2026-07-10T13:27:27.2980064Z   Downloading respx-0.23.1-py2.py3-none-any.whl.metadata (4.3 kB)
+2026-07-10T13:27:27.5941596Z Collecting ruff<1.0,>=0.5 (from medsbom==0.1.0)
+2026-07-10T13:27:27.6036570Z   Downloading ruff-0.15.21-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (26 kB)
+2026-07-10T13:27:27.7126930Z Collecting starlette>=0.46.0 (from fastapi<1.0,>=0.111->medsbom==0.1.0)
+2026-07-10T13:27:27.7219686Z   Downloading starlette-1.3.1-py3-none-any.whl.metadata (6.4 kB)
+2026-07-10T13:27:27.7434304Z Collecting typing-extensions>=4.8.0 (from fastapi<1.0,>=0.111->medsbom==0.1.0)
+2026-07-10T13:27:27.7524432Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-07-10T13:27:27.7749711Z Collecting typing-inspection>=0.4.2 (from fastapi<1.0,>=0.111->medsbom==0.1.0)
+2026-07-10T13:27:27.7840317Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+2026-07-10T13:27:27.7989187Z Collecting annotated-doc>=0.0.2 (from fastapi<1.0,>=0.111->medsbom==0.1.0)
+2026-07-10T13:27:27.8079347Z   Downloading annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+2026-07-10T13:27:27.8290809Z Collecting anyio (from httpx<1.0,>=0.27->medsbom==0.1.0)
+2026-07-10T13:27:27.8381039Z   Downloading anyio-4.14.1-py3-none-any.whl.metadata (4.6 kB)
+2026-07-10T13:27:27.8595060Z Collecting certifi (from httpx<1.0,>=0.27->medsbom==0.1.0)
+2026-07-10T13:27:27.8688568Z   Downloading certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+2026-07-10T13:27:27.9062805Z Collecting httpcore==1.* (from httpx<1.0,>=0.27->medsbom==0.1.0)
+2026-07-10T13:27:27.9154678Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-07-10T13:27:27.9558636Z Collecting idna (from httpx<1.0,>=0.27->medsbom==0.1.0)
+2026-07-10T13:27:27.9648619Z   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+2026-07-10T13:27:27.9843458Z Collecting h11>=0.16 (from httpcore==1.*->httpx<1.0,>=0.27->medsbom==0.1.0)
+2026-07-10T13:27:27.9932204Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-07-10T13:27:28.0409949Z Collecting MarkupSafe>=2.0 (from jinja2<4.0,>=3.1->medsbom==0.1.0)
+2026-07-10T13:27:28.0511329Z   Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-07-10T13:27:28.0715502Z Collecting mypy_extensions>=1.0.0 (from mypy<2.0,>=1.10->medsbom==0.1.0)
+2026-07-10T13:27:28.0805393Z   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+2026-07-10T13:27:28.1091759Z Collecting pathspec>=1.0.0 (from mypy<2.0,>=1.10->medsbom==0.1.0)
+2026-07-10T13:27:28.1102238Z   Using cached pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+2026-07-10T13:27:28.2028089Z Collecting librt>=0.8.0 (from mypy<2.0,>=1.10->medsbom==0.1.0)
+2026-07-10T13:27:28.2124449Z   Downloading librt-0.13.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (1.3 kB)
+2026-07-10T13:27:28.2292669Z Collecting annotated-types>=0.6.0 (from pydantic<3.0,>=2.7->medsbom==0.1.0)
+2026-07-10T13:27:28.2392116Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2026-07-10T13:27:28.7488265Z Collecting pydantic-core==2.46.4 (from pydantic<3.0,>=2.7->medsbom==0.1.0)
+2026-07-10T13:27:28.7582048Z   Downloading pydantic_core-2.46.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+2026-07-10T13:27:28.7757956Z Collecting iniconfig>=1 (from pytest<9.0,>=8.0->medsbom==0.1.0)
+2026-07-10T13:27:28.7847771Z   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+2026-07-10T13:27:28.8418579Z Collecting packaging>=20 (from pytest<9.0,>=8.0->medsbom==0.1.0)
+2026-07-10T13:27:28.8427778Z   Using cached packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+2026-07-10T13:27:28.8565283Z Collecting pluggy<2,>=1.5 (from pytest<9.0,>=8.0->medsbom==0.1.0)
+2026-07-10T13:27:28.8574076Z   Using cached pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-07-10T13:27:28.8755911Z Collecting pygments>=2.7.2 (from pytest<9.0,>=8.0->medsbom==0.1.0)
+2026-07-10T13:27:28.8847287Z   Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+2026-07-10T13:27:29.3354937Z Collecting coverage>=5.2.1 (from coverage[toml]>=5.2.1->pytest-cov<6.0,>=5.0->medsbom==0.1.0)
+2026-07-10T13:27:29.3450004Z   Downloading coverage-7.15.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.6 kB)
+2026-07-10T13:27:29.4085541Z Collecting markdown-it-py>=2.2.0 (from rich<14.0,>=13.0->medsbom==0.1.0)
+2026-07-10T13:27:29.4177083Z   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+2026-07-10T13:27:29.5369669Z Collecting shellingham>=1.3.0 (from typer<1.0,>=0.12->medsbom==0.1.0)
+2026-07-10T13:27:29.5462790Z   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+2026-07-10T13:27:29.5764101Z Collecting click>=7.0 (from uvicorn<1.0,>=0.30->uvicorn[standard]<1.0,>=0.30->medsbom==0.1.0)
+2026-07-10T13:27:29.5854374Z   Downloading click-8.4.2-py3-none-any.whl.metadata (2.6 kB)
+2026-07-10T13:27:29.7116012Z Collecting httptools>=0.8.0 (from uvicorn[standard]<1.0,>=0.30->medsbom==0.1.0)
+2026-07-10T13:27:29.7210525Z   Downloading httptools-0.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+2026-07-10T13:27:29.7463160Z Collecting python-dotenv>=0.13 (from uvicorn[standard]<1.0,>=0.30->medsbom==0.1.0)
+2026-07-10T13:27:29.7555583Z   Downloading python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB)
+2026-07-10T13:27:29.8177280Z Collecting pyyaml>=5.1 (from uvicorn[standard]<1.0,>=0.30->medsbom==0.1.0)
+2026-07-10T13:27:29.8268109Z   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-07-10T13:27:29.8633185Z Collecting uvloop>=0.15.1 (from uvicorn[standard]<1.0,>=0.30->medsbom==0.1.0)
+2026-07-10T13:27:29.8723700Z   Downloading uvloop-0.22.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+2026-07-10T13:27:29.9605665Z Collecting watchfiles>=0.20 (from uvicorn[standard]<1.0,>=0.30->medsbom==0.1.0)
+2026-07-10T13:27:29.9698879Z   Downloading watchfiles-1.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+2026-07-10T13:27:30.0355956Z Collecting websockets>=13.0 (from uvicorn[standard]<1.0,>=0.30->medsbom==0.1.0)
+2026-07-10T13:27:30.0447932Z   Downloading websockets-16.1-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.8 kB)
+2026-07-10T13:27:30.0644555Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich<14.0,>=13.0->medsbom==0.1.0)
+2026-07-10T13:27:30.0733522Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-07-10T13:27:30.0977313Z Downloading fastapi-0.139.0-py3-none-any.whl (130 kB)
+2026-07-10T13:27:30.1172803Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-07-10T13:27:30.1286236Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-07-10T13:27:30.2338646Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-07-10T13:27:30.3301057Z Downloading mypy-1.20.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (14.7 MB)
+2026-07-10T13:27:30.6658096Z    ââââââââââââââââââââââââââââââââââââââââ 14.7/14.7 MB 44.4 MB/s  0:00:00
+2026-07-10T13:27:30.6752491Z Downloading pydantic-2.13.4-py3-none-any.whl (472 kB)
+2026-07-10T13:27:30.6874062Z Downloading pydantic_core-2.46.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-07-10T13:27:30.7027003Z    ââââââââââââââââââââââââââââââââââââââââ 2.1/2.1 MB 136.6 MB/s  0:00:00
+2026-07-10T13:27:30.7119841Z Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+2026-07-10T13:27:30.7154886Z Using cached pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-07-10T13:27:30.7246082Z Downloading pytest_asyncio-0.26.0-py3-none-any.whl (19 kB)
+2026-07-10T13:27:30.7357549Z Downloading pytest_cov-5.0.0-py3-none-any.whl (21 kB)
+2026-07-10T13:27:30.7467094Z Downloading respx-0.23.1-py2.py3-none-any.whl (25 kB)
+2026-07-10T13:27:30.7580056Z Downloading rich-13.9.4-py3-none-any.whl (242 kB)
+2026-07-10T13:27:30.7700312Z Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+2026-07-10T13:27:30.7758714Z    ââââââââââââââââââââââââââââââââââââââââ 1.2/1.2 MB 241.9 MB/s  0:00:00
+2026-07-10T13:27:30.7851865Z Downloading ruff-0.15.21-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.5 MB)
+2026-07-10T13:27:31.0165942Z    ââââââââââââââââââââââââââââââââââââââââ 11.5/11.5 MB 49.2 MB/s  0:00:00
+2026-07-10T13:27:31.0258359Z Downloading typer-0.26.8-py3-none-any.whl (122 kB)
+2026-07-10T13:27:31.0372788Z Downloading uvicorn-0.51.0-py3-none-any.whl (73 kB)
+2026-07-10T13:27:31.0564132Z Downloading annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+2026-07-10T13:27:31.0706307Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2026-07-10T13:27:31.0946738Z Downloading click-8.4.2-py3-none-any.whl (119 kB)
+2026-07-10T13:27:31.1062452Z Downloading coverage-7.15.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (255 kB)
+2026-07-10T13:27:31.1257045Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-07-10T13:27:31.4595419Z Downloading httptools-0.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (523 kB)
+2026-07-10T13:27:31.4717690Z Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+2026-07-10T13:27:31.4831024Z Downloading librt-0.13.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (531 kB)
+2026-07-10T13:27:31.4874136Z    ââââââââââââââââââââââââââââââââââââââââ 531.8/531.8 kB 103.6 MB/s  0:00:00
+2026-07-10T13:27:31.4966926Z Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+2026-07-10T13:27:31.5084758Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-07-10T13:27:31.6219793Z Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-07-10T13:27:31.7804294Z Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+2026-07-10T13:27:31.7838828Z Using cached packaging-26.2-py3-none-any.whl (100 kB)
+2026-07-10T13:27:31.7847879Z Using cached pathspec-1.1.1-py3-none-any.whl (57 kB)
+2026-07-10T13:27:31.7938068Z Downloading python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+2026-07-10T13:27:31.8050421Z Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+2026-07-10T13:27:31.8098990Z    ââââââââââââââââââââââââââââââââââââââââ 807.9/807.9 kB 172.6 MB/s  0:00:00
+2026-07-10T13:27:31.8189406Z Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+2026-07-10T13:27:31.8308452Z Downloading starlette-1.3.1-py3-none-any.whl (73 kB)
+2026-07-10T13:27:31.8419264Z Downloading anyio-4.14.1-py3-none-any.whl (124 kB)
+2026-07-10T13:27:31.8534036Z Downloading idna-3.18-py3-none-any.whl (65 kB)
+2026-07-10T13:27:31.8646440Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-07-10T13:27:31.8755965Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+2026-07-10T13:27:31.8866830Z Downloading uvloop-0.22.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.4 MB)
+2026-07-10T13:27:32.2570439Z    ââââââââââââââââââââââââââââââââââââââââ 4.4/4.4 MB 11.3 MB/s  0:00:00
+2026-07-10T13:27:32.2663942Z Downloading watchfiles-1.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+2026-07-10T13:27:32.2787019Z Downloading websockets-16.1-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (187 kB)
+2026-07-10T13:27:32.2901029Z Downloading certifi-2026.6.17-py3-none-any.whl (133 kB)
+2026-07-10T13:27:32.5517844Z Building wheels for collected packages: medsbom
+2026-07-10T13:27:32.5524385Z   Building editable for medsbom (pyproject.toml): started
+2026-07-10T13:27:32.5818599Z   Building editable for medsbom (pyproject.toml): finished with status 'done'
+2026-07-10T13:27:32.5822460Z   Created wheel for medsbom: filename=medsbom-0.1.0-py3-none-any.whl size=8867 sha256=38e6b40c642c7605b7e3fac5974af5ee4a43bab7e1a1e624c360fabd97f4b80c
+2026-07-10T13:27:32.5824106Z   Stored in directory: /tmp/pip-ephem-wheel-cache-juxk20e5/wheels/cd/ed/12/976e4807a8944db2e4e052e275a6e95ef042814e20d9a35bc2
+2026-07-10T13:27:32.5840204Z Successfully built medsbom
+2026-07-10T13:27:32.6411974Z Installing collected packages: websockets, uvloop, typing-extensions, shellingham, ruff, pyyaml, python-dotenv, pygments, pluggy, pathspec, packaging, mypy_extensions, mdurl, MarkupSafe, librt, iniconfig, idna, httptools, h11, coverage, click, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, pytest, pydantic-core, mypy, markdown-it-py, jinja2, httpcore, anyio, watchfiles, starlette, rich, pytest-cov, pytest-asyncio, pydantic, httpx, typer, respx, fastapi, medsbom
+2026-07-10T13:27:37.9715561Z 
+2026-07-10T13:27:37.9745684Z Successfully installed MarkupSafe-3.0.3 annotated-doc-0.0.4 annotated-types-0.7.0 anyio-4.14.1 certifi-2026.6.17 click-8.4.2 coverage-7.15.0 fastapi-0.139.0 h11-0.16.0 httpcore-1.0.9 httptools-0.8.0 httpx-0.28.1 idna-3.18 iniconfig-2.3.0 jinja2-3.1.6 librt-0.13.0 markdown-it-py-4.2.0 mdurl-0.1.2 medsbom-0.1.0 mypy-1.20.2 mypy_extensions-1.1.0 packaging-26.2 pathspec-1.1.1 pluggy-1.6.0 pydantic-2.13.4 pydantic-core-2.46.4 pygments-2.20.0 pytest-8.4.2 pytest-asyncio-0.26.0 pytest-cov-5.0.0 python-dotenv-1.2.2 pyyaml-6.0.3 respx-0.23.1 rich-13.9.4 ruff-0.15.21 shellingham-1.5.4 starlette-1.3.1 typer-0.26.8 typing-extensions-4.16.0 typing-inspection-0.4.2 uvicorn-0.51.0 uvloop-0.22.1 watchfiles-1.2.0 websockets-16.1
+2026-07-10T13:27:38.2946565Z Package           Version   Editable project location
+2026-07-10T13:27:38.2947468Z ----------------- --------- ---------------------------------
+2026-07-10T13:27:38.2947965Z annotated-doc     0.0.4
+2026-07-10T13:27:38.2949179Z annotated-types   0.7.0
+2026-07-10T13:27:38.2950316Z anyio             4.14.1
+2026-07-10T13:27:38.2951435Z certifi           2026.6.17
+2026-07-10T13:27:38.2952486Z click             8.4.2
+2026-07-10T13:27:38.2953514Z coverage          7.15.0
+2026-07-10T13:27:38.2954778Z fastapi           0.139.0
+2026-07-10T13:27:38.2955780Z h11               0.16.0
+2026-07-10T13:27:38.2956802Z httpcore          1.0.9
+2026-07-10T13:27:38.2958602Z httptools         0.8.0
+2026-07-10T13:27:38.2959576Z httpx             0.28.1
+2026-07-10T13:27:38.2960670Z idna              3.18
+2026-07-10T13:27:38.2961687Z iniconfig         2.3.0
+2026-07-10T13:27:38.2962685Z Jinja2            3.1.6
+2026-07-10T13:27:38.2963664Z librt             0.13.0
+2026-07-10T13:27:38.2964922Z markdown-it-py    4.2.0
+2026-07-10T13:27:38.2965933Z MarkupSafe        3.0.3
+2026-07-10T13:27:38.2966906Z mdurl             0.1.2
+2026-07-10T13:27:38.2968033Z medsbom           0.1.0     /home/runner/work/MedSBOM/MedSBOM
+2026-07-10T13:27:38.2968935Z mypy              1.20.2
+2026-07-10T13:27:38.2969977Z mypy_extensions   1.1.0
+2026-07-10T13:27:38.2970977Z packaging         26.2
+2026-07-10T13:27:38.2972021Z pathspec          1.1.1
+2026-07-10T13:27:38.2973016Z pip               26.1.2
+2026-07-10T13:27:38.2974220Z pluggy            1.6.0
+2026-07-10T13:27:38.2975281Z pydantic          2.13.4
+2026-07-10T13:27:38.2976300Z pydantic_core     2.46.4
+2026-07-10T13:27:38.2977310Z Pygments          2.20.0
+2026-07-10T13:27:38.2978269Z pytest            8.4.2
+2026-07-10T13:27:38.2979381Z pytest-asyncio    0.26.0
+2026-07-10T13:27:38.2980357Z pytest-cov        5.0.0
+2026-07-10T13:27:38.2981366Z python-dotenv     1.2.2
+2026-07-10T13:27:38.2982330Z PyYAML            6.0.3
+2026-07-10T13:27:38.2983304Z respx             0.23.1
+2026-07-10T13:27:38.2984438Z rich              13.9.4
+2026-07-10T13:27:38.2985406Z ruff              0.15.21
+2026-07-10T13:27:38.2986423Z shellingham       1.5.4
+2026-07-10T13:27:38.2987386Z starlette         1.3.1
+2026-07-10T13:27:38.2988364Z typer             0.26.8
+2026-07-10T13:27:38.2989367Z typing_extensions 4.16.0
+2026-07-10T13:27:38.2990362Z typing-inspection 0.4.2
+2026-07-10T13:27:38.2991337Z uvicorn           0.51.0
+2026-07-10T13:27:38.2992283Z uvloop            0.22.1
+2026-07-10T13:27:38.2993265Z watchfiles        1.2.0
+2026-07-10T13:27:38.2994382Z websockets        16.1
+2026-07-10T13:27:38.3255536Z ##[group]Run python -m ruff check medsbom/ tests/
+2026-07-10T13:27:38.3255842Z [36;1mpython -m ruff check medsbom/ tests/[0m
+2026-07-10T13:27:38.3284825Z shell: /usr/bin/bash -e {0}
+2026-07-10T13:27:38.3285023Z env:
+2026-07-10T13:27:38.3285240Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-10T13:27:38.3285580Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-07-10T13:27:38.3285899Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-10T13:27:38.3286186Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-10T13:27:38.3286467Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-10T13:27:38.3286750Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-07-10T13:27:38.3287002Z ##[endgroup]
+2026-07-10T13:27:38.3613913Z All checks passed!
+2026-07-10T13:27:38.3644395Z ##[group]Run python -m mypy medsbom/ --ignore-missing-imports
+2026-07-10T13:27:38.3644769Z [36;1mpython -m mypy medsbom/ --ignore-missing-imports[0m
+2026-07-10T13:27:38.3673124Z shell: /usr/bin/bash -e {0}
+2026-07-10T13:27:38.3673328Z env:
+2026-07-10T13:27:38.3673546Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-10T13:27:38.3674084Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-07-10T13:27:38.3674431Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-10T13:27:38.3674793Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-10T13:27:38.3675075Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-10T13:27:38.3675359Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-07-10T13:27:38.3675613Z ##[endgroup]
+2026-07-10T13:27:42.4221134Z medsbom/core/ingest.py:247: error: Argument "license" to "Component" has incompatible type "Any | None"; expected "str"  [arg-type]
+2026-07-10T13:27:42.4275091Z medsbom/api/models.py:20: error: Missing type arguments for generic type "dict"  [type-arg]
+2026-07-10T13:27:42.8919084Z medsbom/core/cve_match.py:219: error: Returning Any from function declared to return "dict[str, Any] | None"  [no-any-return]
+2026-07-10T13:27:42.9731060Z Found 3 errors in 3 files (checked 14 source files)
+2026-07-10T13:27:42.9859420Z ##[error]Process completed with exit code 1.
+2026-07-10T13:27:42.9896687Z ##[group]Run python -m pytest tests/ -v
+2026-07-10T13:27:42.9896966Z [36;1mpython -m pytest tests/ -v[0m
+2026-07-10T13:27:42.9925433Z shell: /usr/bin/bash -e {0}
+2026-07-10T13:27:42.9925632Z env:
+2026-07-10T13:27:42.9925850Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-10T13:27:42.9926182Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-07-10T13:27:42.9926507Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-10T13:27:42.9926797Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-10T13:27:42.9927089Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-10T13:27:42.9927377Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-07-10T13:27:42.9927626Z ##[endgroup]
+2026-07-10T13:27:44.7067427Z ============================= test session starts ==============================
+2026-07-10T13:27:44.7068478Z platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.12.13/x64/bin/python
+2026-07-10T13:27:44.7069027Z cachedir: .pytest_cache
+2026-07-10T13:27:44.7069317Z rootdir: /home/runner/work/MedSBOM/MedSBOM
+2026-07-10T13:27:44.7069650Z configfile: pyproject.toml
+2026-07-10T13:27:44.7069991Z plugins: respx-0.23.1, anyio-4.14.1, asyncio-0.26.0, cov-5.0.0
+2026-07-10T13:27:44.7070651Z asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+2026-07-10T13:27:45.1431943Z collecting ... collected 206 items
+2026-07-10T13:27:45.1432248Z 
+2026-07-10T13:27:45.1484240Z tests/test_api.py::TestAPIPositive::test_health PASSED                   [  0%]
+2026-07-10T13:27:45.1692787Z tests/test_api.py::TestAPIPositive::test_create_scan PASSED              [  0%]
+2026-07-10T13:27:45.1763235Z tests/test_api.py::TestAPIPositive::test_get_scan PASSED                 [  1%]
+2026-07-10T13:27:45.2092450Z tests/test_api.py::TestAPIPositive::test_generate_fda_report PASSED      [  1%]
+2026-07-10T13:27:45.2231803Z tests/test_api.py::TestAPIPositive::test_generate_soup_report PASSED     [  2%]
+2026-07-10T13:27:45.2379149Z tests/test_api.py::TestAPIPositive::test_generate_vuln_report PASSED     [  2%]
+2026-07-10T13:27:45.2413970Z tests/test_api.py::TestAPIPositive::test_list_audit PASSED               [  3%]
+2026-07-10T13:27:45.2441492Z tests/test_api.py::TestAPINegative::test_invalid_sbom_format PASSED      [  3%]
+2026-07-10T13:27:45.2469075Z tests/test_api.py::TestAPINegative::test_scan_not_found PASSED           [  4%]
+2026-07-10T13:27:45.2496557Z tests/test_api.py::TestAPINegative::test_report_scan_not_found PASSED    [  4%]
+2026-07-10T13:27:45.2922391Z tests/test_api.py::TestAPINegative::test_invalid_report_format PASSED    [  5%]
+2026-07-10T13:27:45.2948796Z tests/test_api.py::TestAPINegative::test_missing_sbom_json_field PASSED  [  5%]
+2026-07-10T13:27:45.2999413Z tests/test_api.py::TestAPIEdgeCases::test_empty_components_sbom PASSED   [  6%]
+2026-07-10T13:27:45.3041078Z tests/test_api.py::TestAPIEdgeCases::test_audit_with_limit PASSED        [  6%]
+2026-07-10T13:27:45.3072714Z tests/test_api.py::TestAPIEdgeCases::test_audit_limit_capped PASSED      [  7%]
+2026-07-10T13:27:45.4217945Z tests/test_api.py::TestAPIEdgeCases::test_spdx_upload PASSED             [  7%]
+2026-07-10T13:27:45.5632931Z tests/test_audit.py::TestAuditTrailPositive::test_log_entry PASSED       [  8%]
+2026-07-10T13:27:45.5815122Z tests/test_audit.py::TestAuditTrailPositive::test_retrieve_entries PASSED [  8%]
+2026-07-10T13:27:45.5894844Z tests/test_audit.py::TestAuditTrailPositive::test_filter_by_scan_id PASSED [  9%]
+2026-07-10T13:27:45.5959064Z tests/test_audit.py::TestAuditTrailPositive::test_count PASSED           [  9%]
+2026-07-10T13:27:45.6040895Z tests/test_audit.py::TestAuditTrailPositive::test_entries_ordered_by_timestamp PASSED [ 10%]
+2026-07-10T13:27:45.6098838Z tests/test_audit.py::TestAuditTrailPositive::test_custom_actor PASSED    [ 10%]
+2026-07-10T13:27:45.7035697Z tests/test_audit.py::TestAuditTrailPositive::test_pagination PASSED      [ 11%]
+2026-07-10T13:27:45.7091437Z tests/test_audit.py::TestAuditTrailAppendOnly::test_update_blocked PASSED [ 11%]
+2026-07-10T13:27:45.7144992Z tests/test_audit.py::TestAuditTrailAppendOnly::test_delete_blocked PASSED [ 12%]
+2026-07-10T13:27:45.7195660Z tests/test_audit.py::TestAuditTrailEdgeCases::test_empty_db PASSED       [ 12%]
+2026-07-10T13:27:45.7632714Z tests/test_audit.py::TestAuditTrailEdgeCases::test_db_created_if_not_exists PASSED [ 13%]
+2026-07-10T13:27:45.7711583Z tests/test_audit.py::TestAuditTrailEdgeCases::test_multiple_instances_same_db PASSED [ 13%]
+2026-07-10T13:27:45.7769442Z tests/test_audit.py::TestAuditTrailEdgeCases::test_empty_details PASSED  [ 14%]
+2026-07-10T13:27:45.7841445Z tests/test_audit.py::TestAuditTrailEdgeCases::test_long_details PASSED   [ 14%]
+2026-07-10T13:27:46.2597537Z tests/test_audit.py::TestAuditTrailEdgeCases::test_unique_entry_ids PASSED [ 15%]
+2026-07-10T13:27:46.2670023Z tests/test_cli.py::TestCLIPositive::test_version PASSED                  [ 15%]
+2026-07-10T13:27:46.2751660Z tests/test_cli.py::TestCLIPositive::test_ingest_cyclonedx PASSED         [ 16%]
+2026-07-10T13:27:46.2823254Z tests/test_cli.py::TestCLIPositive::test_ingest_spdx PASSED              [ 16%]
+2026-07-10T13:27:46.3186654Z tests/test_cli.py::TestCLIPositive::test_help_text PASSED                [ 16%]
+2026-07-10T13:27:46.3265808Z tests/test_cli.py::TestCLIPositive::test_ingest_shows_components PASSED  [ 17%]
+2026-07-10T13:27:46.3314238Z tests/test_cli.py::TestCLINegative::test_ingest_file_not_found PASSED    [ 17%]
+2026-07-10T13:27:46.3375945Z tests/test_cli.py::TestCLINegative::test_ingest_invalid_json PASSED      [ 18%]
+2026-07-10T13:27:46.3422527Z tests/test_cli.py::TestCLINegative::test_check_file_not_found PASSED     [ 18%]
+2026-07-10T13:27:46.3471968Z tests/test_cli.py::TestCLINegative::test_report_file_not_found PASSED    [ 19%]
+2026-07-10T13:27:46.3556560Z tests/test_cli.py::TestCLINegative::test_no_args PASSED                  [ 19%]
+2026-07-10T13:27:46.3616620Z tests/test_cli.py::TestCLIEdgeCases::test_ingest_empty_sbom PASSED       [ 20%]
+2026-07-10T13:27:46.3694528Z tests/test_cli.py::TestCLIEdgeCases::test_verbose_flag PASSED            [ 20%]
+2026-07-10T13:27:46.3803281Z tests/test_cli.py::TestCLIEdgeCases::test_audit_empty PASSED             [ 21%]
+2026-07-10T13:27:46.3903090Z tests/test_cli_extended.py::TestCLICheckCommand::test_check_basic PASSED [ 21%]
+2026-07-10T13:27:46.4168012Z tests/test_cli_extended.py::TestCLICheckCommand::test_check_with_output_json PASSED [ 22%]
+2026-07-10T13:27:46.4307554Z tests/test_cli_extended.py::TestCLICheckCommand::test_check_with_findings PASSED [ 22%]
+2026-07-10T13:27:46.4356340Z tests/test_cli_extended.py::TestCLICheckCommand::test_check_file_not_found PASSED [ 23%]
+2026-07-10T13:27:46.4411103Z tests/test_cli_extended.py::TestCLICheckCommand::test_check_invalid_json PASSED [ 23%]
+2026-07-10T13:27:46.4757648Z tests/test_cli_extended.py::TestCLIReportCommand::test_report_all_formats PASSED [ 24%]
+2026-07-10T13:27:46.5187314Z tests/test_cli_extended.py::TestCLIReportCommand::test_report_fda_only PASSED [ 24%]
+2026-07-10T13:27:46.5342125Z tests/test_cli_extended.py::TestCLIReportCommand::test_report_soup_only PASSED [ 25%]
+2026-07-10T13:27:46.5515178Z tests/test_cli_extended.py::TestCLIReportCommand::test_report_vuln_only PASSED [ 25%]
+2026-07-10T13:27:46.5693050Z tests/test_cli_extended.py::TestCLIReportCommand::test_report_from_precomputed_results PASSED [ 26%]
+2026-07-10T13:27:46.5741700Z tests/test_cli_extended.py::TestCLIReportCommand::test_report_file_not_found PASSED [ 26%]
+2026-07-10T13:27:46.5798518Z tests/test_cli_extended.py::TestCLIReportCommand::test_report_invalid_json PASSED [ 27%]
+2026-07-10T13:27:46.6119420Z tests/test_cli_extended.py::TestCLIAuditCommand::test_audit_empty PASSED [ 27%]
+2026-07-10T13:27:46.9078660Z tests/test_cli_extended.py::TestCLIAuditCommand::test_audit_with_entries PASSED [ 28%]
+2026-07-10T13:27:46.9201512Z tests/test_cli_extended.py::TestCLIAuditCommand::test_audit_filter_by_scan_id PASSED [ 28%]
+2026-07-10T13:27:46.9212987Z tests/test_cli_extended.py::TestCLIHelpers::test_try_load_scan_result_valid PASSED [ 29%]
+2026-07-10T13:27:46.9222815Z tests/test_cli_extended.py::TestCLIHelpers::test_try_load_scan_result_invalid_json PASSED [ 29%]
+2026-07-10T13:27:46.9233258Z tests/test_cli_extended.py::TestCLIHelpers::test_try_load_scan_result_not_scan PASSED [ 30%]
+2026-07-10T13:27:46.9272419Z tests/test_cli_extended.py::TestCLIHelpers::test_display_check_results PASSED [ 30%]
+2026-07-10T13:27:46.9283935Z tests/test_coverage_extras.py::TestCVEMatcherCoverage::test_query_nvd_uses_cache_hit PASSED [ 31%]
+2026-07-10T13:27:46.9310494Z tests/test_coverage_extras.py::TestCVEMatcherCoverage::test_query_nvd_with_api_key PASSED [ 31%]
+2026-07-10T13:27:47.5326423Z tests/test_coverage_extras.py::TestCVEMatcherCoverage::test_rate_limit_with_key_is_faster PASSED [ 32%]
+2026-07-10T13:27:47.5339713Z tests/test_coverage_extras.py::TestCVEMatcherCoverage::test_write_cache_failure PASSED [ 32%]
+2026-07-10T13:27:47.5348963Z tests/test_coverage_extras.py::TestCVEMatcherCoverage::test_kev_data_cached_in_memory PASSED [ 33%]
+2026-07-10T13:27:47.5359662Z tests/test_coverage_extras.py::TestCVEMatcherCoverage::test_kev_from_disk_cache PASSED [ 33%]
+2026-07-10T13:27:47.5579771Z tests/test_coverage_extras.py::TestEOLCheckerCoverage::test_query_eol_api_cycle_not_found_fallback_all PASSED [ 33%]
+2026-07-10T13:27:47.5592556Z tests/test_coverage_extras.py::TestEOLCheckerCoverage::test_query_eol_api_both_404 PASSED [ 34%]
+2026-07-10T13:27:47.5607151Z tests/test_coverage_extras.py::TestEOLCheckerCoverage::test_query_eol_api_http_error PASSED [ 34%]
+2026-07-10T13:27:47.5613435Z tests/test_coverage_extras.py::TestEOLCheckerCoverage::test_find_best_match_with_prefix_match PASSED [ 35%]
+2026-07-10T13:27:47.5620919Z tests/test_coverage_extras.py::TestIngestCoverage::test_parse_sbom_from_path_object PASSED [ 35%]
+2026-07-10T13:27:47.5626893Z tests/test_coverage_extras.py::TestIngestCoverage::test_spdx_creator_tool_extraction PASSED [ 36%]
+2026-07-10T13:27:47.5632297Z tests/test_coverage_extras.py::TestIngestCoverage::test_spdx_no_tool_in_creators PASSED [ 36%]
+2026-07-10T13:27:47.5637967Z tests/test_coverage_extras.py::TestIngestCoverage::test_spdx_noassertion_supplier PASSED [ 37%]
+2026-07-10T13:27:47.5643323Z tests/test_coverage_extras.py::TestIngestCoverage::test_cyclonedx_empty_metadata_tools PASSED [ 37%]
+2026-07-10T13:27:47.5648819Z tests/test_coverage_extras.py::TestIngestCoverage::test_cyclonedx_no_metadata PASSED [ 38%]
+2026-07-10T13:27:47.5654181Z tests/test_coverage_extras.py::TestIngestCoverage::test_spdx_package_missing_name PASSED [ 38%]
+2026-07-10T13:27:47.5659541Z tests/test_coverage_extras.py::TestIngestCoverage::test_spdx_package_non_dict_skipped PASSED [ 39%]
+2026-07-10T13:27:47.5666051Z tests/test_coverage_extras.py::TestRiskScoreCoverage::test_eol_score_exactly_zero_days PASSED [ 39%]
+2026-07-10T13:27:47.5675916Z tests/test_cve_match.py::TestCVEMatcherPositive::test_parse_nvd_response_single_cve PASSED [ 40%]
+2026-07-10T13:27:47.5684950Z tests/test_cve_match.py::TestCVEMatcherPositive::test_parse_nvd_response_empty PASSED [ 40%]
+2026-07-10T13:27:47.5690582Z tests/test_cve_match.py::TestCVEMatcherPositive::test_kev_lookup_build PASSED [ 41%]
+2026-07-10T13:27:47.5701704Z tests/test_cve_match.py::TestCVEMatcherPositive::test_kev_flag_applied PASSED [ 41%]
+2026-07-10T13:27:47.5712375Z tests/test_cve_match.py::TestCVEMatcherPositive::test_match_components_batch PASSED [ 42%]
+2026-07-10T13:27:47.5721683Z tests/test_cve_match.py::TestCVEMatcherPositive::test_multiple_cves_per_component PASSED [ 42%]
+2026-07-10T13:27:47.5738698Z tests/test_cve_match.py::TestCVEMatcherNegative::test_nvd_api_rate_limit PASSED [ 43%]
+2026-07-10T13:27:47.5755523Z tests/test_cve_match.py::TestCVEMatcherNegative::test_nvd_api_server_error PASSED [ 43%]
+2026-07-10T13:27:47.5771065Z tests/test_cve_match.py::TestCVEMatcherNegative::test_nvd_api_network_error PASSED [ 44%]
+2026-07-10T13:27:47.5787574Z tests/test_cve_match.py::TestCVEMatcherNegative::test_kev_feed_failure_graceful PASSED [ 44%]
+2026-07-10T13:27:47.5799648Z tests/test_cve_match.py::TestCVEMatcherNegative::test_match_component_error_in_batch PASSED [ 45%]
+2026-07-10T13:27:47.5805099Z tests/test_cve_match.py::TestCVEMatcherEdgeCases::test_severity_from_score_critical PASSED [ 45%]
+2026-07-10T13:27:47.5810516Z tests/test_cve_match.py::TestCVEMatcherEdgeCases::test_severity_from_score_high PASSED [ 46%]
+2026-07-10T13:27:47.5815998Z tests/test_cve_match.py::TestCVEMatcherEdgeCases::test_severity_from_score_medium PASSED [ 46%]
+2026-07-10T13:27:47.5821269Z tests/test_cve_match.py::TestCVEMatcherEdgeCases::test_severity_from_score_low PASSED [ 47%]
+2026-07-10T13:27:47.5826605Z tests/test_cve_match.py::TestCVEMatcherEdgeCases::test_severity_from_score_none PASSED [ 47%]
+2026-07-10T13:27:47.5837008Z tests/test_cve_match.py::TestCVEMatcherEdgeCases::test_cache_write_and_read PASSED [ 48%]
+2026-07-10T13:27:47.5846173Z tests/test_cve_match.py::TestCVEMatcherEdgeCases::test_cache_miss_returns_none PASSED [ 48%]
+2026-07-10T13:27:47.5855276Z tests/test_cve_match.py::TestCVEMatcherEdgeCases::test_parse_nvd_missing_cve_id PASSED [ 49%]
+2026-07-10T13:27:47.5864252Z tests/test_cve_match.py::TestCVEMatcherEdgeCases::test_description_truncation PASSED [ 49%]
+2026-07-10T13:27:47.5875636Z tests/test_cve_match.py::TestCVEMatcherEdgeCases::test_component_no_version PASSED [ 50%]
+2026-07-10T13:27:47.5881190Z tests/test_cve_match.py::TestCVEMatcherEdgeCases::test_kev_empty_vulnerabilities PASSED [ 50%]
+2026-07-10T13:27:47.5891631Z tests/test_cve_match.py::TestCVEMatcherEdgeCases::test_cvss_v2_fallback PASSED [ 50%]
+2026-07-10T13:27:47.5998591Z tests/test_doc_generator.py::TestDocGeneratorPositive::test_fda_summary_generated PASSED [ 51%]
+2026-07-10T13:27:47.6101262Z tests/test_doc_generator.py::TestDocGeneratorPositive::test_fda_summary_contains_disclaimer PASSED [ 51%]
+2026-07-10T13:27:47.6205177Z tests/test_doc_generator.py::TestDocGeneratorPositive::test_fda_summary_contains_risk_table PASSED [ 52%]
+2026-07-10T13:27:47.6308317Z tests/test_doc_generator.py::TestDocGeneratorPositive::test_fda_summary_kev_section PASSED [ 52%]
+2026-07-10T13:27:47.6422998Z tests/test_doc_generator.py::TestDocGeneratorPositive::test_fda_summary_eol_section PASSED [ 53%]
+2026-07-10T13:27:47.6495601Z tests/test_doc_generator.py::TestDocGeneratorPositive::test_soup_assessment_generated PASSED [ 53%]
+2026-07-10T13:27:47.6567581Z tests/test_doc_generator.py::TestDocGeneratorPositive::test_soup_assessment_contains_disclaimer PASSED [ 54%]
+2026-07-10T13:27:47.6654411Z tests/test_doc_generator.py::TestDocGeneratorPositive::test_vuln_review_log_generated PASSED [ 54%]
+2026-07-10T13:27:47.6741040Z tests/test_doc_generator.py::TestDocGeneratorPositive::test_vuln_review_log_contains_findings PASSED [ 55%]
+2026-07-10T13:27:47.6827909Z tests/test_doc_generator.py::TestDocGeneratorPositive::test_vuln_review_log_attestation PASSED [ 55%]
+2026-07-10T13:27:47.7079676Z tests/test_doc_generator.py::TestDocGeneratorPositive::test_full_bundle PASSED [ 56%]
+2026-07-10T13:27:47.7087334Z tests/test_doc_generator.py::TestDocGeneratorNegative::test_invalid_templates_dir PASSED [ 56%]
+2026-07-10T13:27:47.7188925Z tests/test_doc_generator.py::TestDocGeneratorEdgeCases::test_empty_scan PASSED [ 57%]
+2026-07-10T13:27:47.7290391Z tests/test_doc_generator.py::TestDocGeneratorEdgeCases::test_scan_no_findings PASSED [ 57%]
+2026-07-10T13:27:47.7391257Z tests/test_doc_generator.py::TestDocGeneratorEdgeCases::test_special_characters_in_component PASSED [ 58%]
+2026-07-10T13:27:47.7642047Z tests/test_doc_generator.py::TestDocGeneratorEdgeCases::test_output_dir_created_automatically PASSED [ 58%]
+2026-07-10T13:27:47.7648555Z tests/test_eol_check.py::TestEOLCheckerPositive::test_resolve_known_slug PASSED [ 59%]
+2026-07-10T13:27:47.7654623Z tests/test_eol_check.py::TestEOLCheckerPositive::test_resolve_slug_with_namespace PASSED [ 59%]
+2026-07-10T13:27:47.7663241Z tests/test_eol_check.py::TestEOLCheckerPositive::test_check_component_with_mock PASSED [ 60%]
+2026-07-10T13:27:47.7670795Z tests/test_eol_check.py::TestEOLCheckerPositive::test_parse_cycle_response PASSED [ 60%]
+2026-07-10T13:27:47.7678363Z tests/test_eol_check.py::TestEOLCheckerPositive::test_check_components_batch PASSED [ 61%]
+2026-07-10T13:27:47.7685159Z tests/test_eol_check.py::TestEOLCheckerPositive::test_product_still_supported PASSED [ 61%]
+2026-07-10T13:27:47.7690983Z tests/test_eol_check.py::TestEOLCheckerNegative::test_unknown_product PASSED [ 62%]
+2026-07-10T13:27:47.7702886Z tests/test_eol_check.py::TestEOLCheckerNegative::test_api_unavailable PASSED [ 62%]
+2026-07-10T13:27:47.7715762Z tests/test_eol_check.py::TestEOLCheckerNegative::test_api_404_product PASSED [ 63%]
+2026-07-10T13:27:47.7721739Z tests/test_eol_check.py::TestEOLCheckerEdgeCases::test_extract_cycle_major_minor PASSED [ 63%]
+2026-07-10T13:27:47.7727744Z tests/test_eol_check.py::TestEOLCheckerEdgeCases::test_extract_cycle_major_only PASSED [ 64%]
+2026-07-10T13:27:47.7733590Z tests/test_eol_check.py::TestEOLCheckerEdgeCases::test_extract_cycle_complex_version PASSED [ 64%]
+2026-07-10T13:27:47.7739809Z tests/test_eol_check.py::TestEOLCheckerEdgeCases::test_extract_cycle_non_numeric PASSED [ 65%]
+2026-07-10T13:27:47.7745974Z tests/test_eol_check.py::TestEOLCheckerEdgeCases::test_parse_date_field_valid PASSED [ 65%]
+2026-07-10T13:27:47.7751729Z tests/test_eol_check.py::TestEOLCheckerEdgeCases::test_parse_date_field_boolean PASSED [ 66%]
+2026-07-10T13:27:47.7757746Z tests/test_eol_check.py::TestEOLCheckerEdgeCases::test_parse_date_field_invalid PASSED [ 66%]
+2026-07-10T13:27:47.7784784Z tests/test_eol_check.py::TestEOLCheckerEdgeCases::test_parse_date_field_none PASSED [ 66%]
+2026-07-10T13:27:47.7785745Z tests/test_eol_check.py::TestEOLCheckerEdgeCases::test_eol_date_in_past PASSED [ 67%]
+2026-07-10T13:27:47.7786515Z tests/test_eol_check.py::TestEOLCheckerEdgeCases::test_eol_boolean_true PASSED [ 67%]
+2026-07-10T13:27:47.7787295Z tests/test_eol_check.py::TestEOLCheckerEdgeCases::test_product_slug_map_coverage PASSED [ 68%]
+2026-07-10T13:27:47.7791258Z tests/test_eol_check.py::TestEOLCheckerEdgeCases::test_find_best_match_empty_cycles PASSED [ 68%]
+2026-07-10T13:27:47.7798274Z tests/test_eol_check.py::TestEOLCheckerEdgeCases::test_find_best_match_no_match PASSED [ 69%]
+2026-07-10T13:27:47.7963449Z tests/test_final_coverage.py::TestCLIWarningsAndTruncation::test_ingest_many_warnings PASSED [ 69%]
+2026-07-10T13:27:47.8141830Z tests/test_final_coverage.py::TestCLIWarningsAndTruncation::test_ingest_over_50_components PASSED [ 70%]
+2026-07-10T13:27:47.8234548Z tests/test_final_coverage.py::TestCLICheckEdges::test_check_audit_failure_non_fatal PASSED [ 70%]
+2026-07-10T13:27:47.8411817Z tests/test_final_coverage.py::TestCLICheckEdges::test_report_audit_failure_non_fatal PASSED [ 71%]
+2026-07-10T13:27:47.8432788Z tests/test_final_coverage.py::TestCVEMatcherNetworkPaths::test_query_nvd_successful_request PASSED [ 71%]
+2026-07-10T13:27:47.8452183Z tests/test_final_coverage.py::TestCVEMatcherNetworkPaths::test_kev_feed_fetched_from_network PASSED [ 72%]
+2026-07-10T13:27:47.8471341Z tests/test_final_coverage.py::TestCVEMatcherNetworkPaths::test_match_component_with_purl PASSED [ 72%]
+2026-07-10T13:27:47.8513343Z tests/test_final_coverage.py::TestAPIAuditFailure::test_create_scan_audit_failure PASSED [ 73%]
+2026-07-10T13:27:47.8520407Z tests/test_ingest.py::TestDetectFormat::test_detect_cyclonedx PASSED     [ 73%]
+2026-07-10T13:27:47.8527241Z tests/test_ingest.py::TestDetectFormat::test_detect_spdx PASSED          [ 74%]
+2026-07-10T13:27:47.8532783Z tests/test_ingest.py::TestDetectFormat::test_detect_cyclonedx_heuristic PASSED [ 74%]
+2026-07-10T13:27:47.8538600Z tests/test_ingest.py::TestDetectFormat::test_detect_spdx_heuristic PASSED [ 75%]
+2026-07-10T13:27:47.8545616Z tests/test_ingest.py::TestParseCycloneDX::test_parse_from_file PASSED    [ 75%]
+2026-07-10T13:27:47.8552355Z tests/test_ingest.py::TestParseCycloneDX::test_parse_from_dict PASSED    [ 76%]
+2026-07-10T13:27:47.9344378Z tests/test_ingest.py::TestParseCycloneDX::test_parse_from_json_string FAILED [ 76%]
+2026-07-10T13:27:47.9352069Z tests/test_ingest.py::TestParseCycloneDX::test_component_fields PASSED   [ 77%]
+2026-07-10T13:27:47.9358000Z tests/test_ingest.py::TestParseCycloneDX::test_minimal_cyclonedx PASSED  [ 77%]
+2026-07-10T13:27:47.9363924Z tests/test_ingest.py::TestParseCycloneDX::test_component_identifier_with_purl PASSED [ 78%]
+2026-07-10T13:27:47.9369505Z tests/test_ingest.py::TestParseCycloneDX::test_component_identifier_without_purl PASSED [ 78%]
+2026-07-10T13:27:47.9376362Z tests/test_ingest.py::TestParseSPDX::test_parse_from_file PASSED         [ 79%]
+2026-07-10T13:27:47.9382844Z tests/test_ingest.py::TestParseSPDX::test_parse_from_dict PASSED         [ 79%]
+2026-07-10T13:27:47.9389775Z tests/test_ingest.py::TestParseSPDX::test_spdx_purl_extraction PASSED    [ 80%]
+2026-07-10T13:27:47.9396597Z tests/test_ingest.py::TestParseSPDX::test_spdx_noassertion_license PASSED [ 80%]
+2026-07-10T13:27:47.9402341Z tests/test_ingest.py::TestParseSPDX::test_minimal_spdx PASSED            [ 81%]
+2026-07-10T13:27:47.9409433Z tests/test_ingest.py::TestIngestErrors::test_invalid_json_string PASSED  [ 81%]
+2026-07-10T13:27:47.9415949Z tests/test_ingest.py::TestIngestErrors::test_non_object_json PASSED      [ 82%]
+2026-07-10T13:27:47.9421885Z tests/test_ingest.py::TestIngestErrors::test_unknown_format PASSED       [ 82%]
+2026-07-10T13:27:47.9428113Z tests/test_ingest.py::TestIngestErrors::test_file_not_found PASSED       [ 83%]
+2026-07-10T13:27:47.9434040Z tests/test_ingest.py::TestIngestErrors::test_components_not_list PASSED  [ 83%]
+2026-07-10T13:27:47.9440102Z tests/test_ingest.py::TestIngestErrors::test_spdx_packages_not_list PASSED [ 83%]
+2026-07-10T13:27:47.9445734Z tests/test_ingest.py::TestIngestEdgeCases::test_empty_components_list PASSED [ 84%]
+2026-07-10T13:27:47.9451097Z tests/test_ingest.py::TestIngestEdgeCases::test_component_missing_name PASSED [ 84%]
+2026-07-10T13:27:47.9456665Z tests/test_ingest.py::TestIngestEdgeCases::test_component_missing_version PASSED [ 85%]
+2026-07-10T13:27:47.9461963Z tests/test_ingest.py::TestIngestEdgeCases::test_component_missing_purl PASSED [ 85%]
+2026-07-10T13:27:47.9467607Z tests/test_ingest.py::TestIngestEdgeCases::test_non_dict_component_skipped PASSED [ 86%]
+2026-07-10T13:27:47.9472918Z tests/test_ingest.py::TestIngestEdgeCases::test_special_characters_in_name PASSED [ 86%]
+2026-07-10T13:27:47.9506130Z tests/test_ingest.py::TestIngestEdgeCases::test_very_large_sbom PASSED   [ 87%]
+2026-07-10T13:27:47.9511795Z tests/test_ingest.py::TestIngestEdgeCases::test_source_tool_string_format PASSED [ 87%]
+2026-07-10T13:27:47.9517584Z tests/test_ingest.py::TestIngestEdgeCases::test_spdx_package_missing_external_refs PASSED [ 88%]
+2026-07-10T13:27:47.9523986Z tests/test_ingest.py::TestIngestEdgeCases::test_identifier_without_version_or_purl PASSED [ 88%]
+2026-07-10T13:27:47.9529620Z tests/test_risk_score.py::TestScoreFinding::test_critical_cvss PASSED    [ 89%]
+2026-07-10T13:27:47.9535285Z tests/test_risk_score.py::TestScoreFinding::test_kev_elevates_score PASSED [ 89%]
+2026-07-10T13:27:47.9540979Z tests/test_risk_score.py::TestScoreFinding::test_eol_elevates_score PASSED [ 90%]
+2026-07-10T13:27:47.9546646Z tests/test_risk_score.py::TestScoreFinding::test_max_score_capped_at_10 PASSED [ 90%]
+2026-07-10T13:27:47.9551921Z tests/test_risk_score.py::TestClassifyRisk::test_critical_threshold PASSED [ 91%]
+2026-07-10T13:27:47.9557180Z tests/test_risk_score.py::TestClassifyRisk::test_high_threshold PASSED   [ 91%]
+2026-07-10T13:27:47.9562324Z tests/test_risk_score.py::TestClassifyRisk::test_medium_threshold PASSED [ 92%]
+2026-07-10T13:27:47.9567686Z tests/test_risk_score.py::TestClassifyRisk::test_low_threshold PASSED    [ 92%]
+2026-07-10T13:27:47.9572867Z tests/test_risk_score.py::TestClassifyRisk::test_none_threshold PASSED   [ 93%]
+2026-07-10T13:27:47.9578865Z tests/test_risk_score.py::TestScoreComponent::test_component_with_critical_finding PASSED [ 93%]
+2026-07-10T13:27:47.9584449Z tests/test_risk_score.py::TestScoreComponent::test_component_with_medium_finding PASSED [ 94%]
+2026-07-10T13:27:47.9590750Z tests/test_risk_score.py::TestScoreComponent::test_component_with_multiple_findings PASSED [ 94%]
+2026-07-10T13:27:47.9596085Z tests/test_risk_score.py::TestScoreComponent::test_component_eol_only PASSED [ 95%]
+2026-07-10T13:27:47.9601361Z tests/test_risk_score.py::TestScoreComponentNegative::test_no_findings_no_eol PASSED [ 95%]
+2026-07-10T13:27:47.9606704Z tests/test_risk_score.py::TestScoreComponentNegative::test_empty_results_scan PASSED [ 96%]
+2026-07-10T13:27:47.9611885Z tests/test_risk_score.py::TestScoreEdgeCases::test_cvss_zero PASSED      [ 96%]
+2026-07-10T13:27:47.9617349Z tests/test_risk_score.py::TestScoreEdgeCases::test_cvss_exactly_10 PASSED [ 97%]
+2026-07-10T13:27:47.9622678Z tests/test_risk_score.py::TestScoreEdgeCases::test_eol_far_future PASSED [ 97%]
+2026-07-10T13:27:47.9628407Z tests/test_risk_score.py::TestScoreEdgeCases::test_eol_within_6_months PASSED [ 98%]
+2026-07-10T13:27:47.9634119Z tests/test_risk_score.py::TestScoreEdgeCases::test_eol_within_12_months PASSED [ 98%]
+2026-07-10T13:27:47.9639786Z tests/test_risk_score.py::TestScoreEdgeCases::test_risk_summary_counts PASSED [ 99%]
+2026-07-10T13:27:47.9645798Z tests/test_risk_score.py::TestScoreEdgeCases::test_scan_results_returns_highest PASSED [ 99%]
+2026-07-10T13:27:48.0497033Z tests/test_risk_score.py::TestScoreEdgeCases::test_all_none_scan PASSED  [100%]
+2026-07-10T13:27:48.0497515Z 
+2026-07-10T13:27:48.0497683Z =================================== FAILURES ===================================
+2026-07-10T13:27:48.0498236Z ________________ TestParseCycloneDX.test_parse_from_json_string ________________
+2026-07-10T13:27:48.0498622Z 
+2026-07-10T13:27:48.0498855Z self = <tests.test_ingest.TestParseCycloneDX object at 0x7f597ccf6360>
+2026-07-10T13:27:48.0500118Z sample_cyclonedx_dict = {'bomFormat': 'CycloneDX', 'components': [{'licenses': [{'license': {'id': 'Apache-2.0'}}], 'name': 'openssl', 'purl':...{'name': 'syft', 'vendor': 'anchore', 'version': '1.0.0'}]}, 'serialNumber': 'urn:uuid:sample-medical-device-001', ...}
+2026-07-10T13:27:48.0500768Z 
+2026-07-10T13:27:48.0500990Z     def test_parse_from_json_string(self, sample_cyclonedx_dict: dict) -> None:
+2026-07-10T13:27:48.0501321Z         json_str = json.dumps(sample_cyclonedx_dict)
+2026-07-10T13:27:48.0501657Z         # Create a temp file path that doesn't exist so it falls through to string parsing
+2026-07-10T13:27:48.0501980Z >       result = parse_sbom(json_str)
+2026-07-10T13:27:48.0502192Z                  ^^^^^^^^^^^^^^^^^^^^
+2026-07-10T13:27:48.0502314Z 
+2026-07-10T13:27:48.0502396Z tests/test_ingest.py:58: 
+2026-07-10T13:27:48.0502621Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-07-10T13:27:48.0502897Z medsbom/core/ingest.py:76: in parse_sbom
+2026-07-10T13:27:48.0503111Z     data = _load_json(source)
+2026-07-10T13:27:48.0503299Z            ^^^^^^^^^^^^^^^^^^
+2026-07-10T13:27:48.0503487Z medsbom/core/ingest.py:90: in _load_json
+2026-07-10T13:27:48.0503697Z     if path.exists():
+2026-07-10T13:27:48.0504036Z        ^^^^^^^^^^^^^
+2026-07-10T13:27:48.0504442Z /opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/pathlib.py:860: in exists
+2026-07-10T13:27:48.0504793Z     self.stat(follow_symlinks=follow_symlinks)
+2026-07-10T13:27:48.0505057Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-07-10T13:27:48.0505239Z 
+2026-07-10T13:27:48.0505773Z self = PosixPath('{"bomFormat": "CycloneDX", "specVersion": "1.5", "serialNumber": "urn:uuid:sample-medical-device-001", "ver...3-Clause"}}]}, {"type": "operating-system", "name": "debian", "version": "11.9", "purl": "pkg:generic/debian@11.9"}]}')
+2026-07-10T13:27:48.0506377Z 
+2026-07-10T13:27:48.0506464Z     def stat(self, *, follow_symlinks=True):
+2026-07-10T13:27:48.0506678Z         """
+2026-07-10T13:27:48.0506895Z         Return the result of the stat() system call on this path, like
+2026-07-10T13:27:48.0507161Z         os.stat() does.
+2026-07-10T13:27:48.0507325Z         """
+2026-07-10T13:27:48.0507525Z >       return os.stat(self, follow_symlinks=follow_symlinks)
+2026-07-10T13:27:48.0508031Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-07-10T13:27:48.0511292Z E       OSError: [Errno 36] File name too long: '{"bomFormat": "CycloneDX", "specVersion": "1.5", "serialNumber": "urn:uuid:sample-medical-device-001", "version": 1, "metadata": {"timestamp": "2026-07-10T12:00:00Z", "tools": [{"vendor": "anchore", "name": "syft", "version": "1.0.0"}], "component": {"type": "application", "name": "insulin-pump-firmware", "version": "2.3.1"}}, "components": [{"type": "library", "name": "openssl", "version": "1.1.1w", "purl": "pkg:generic/openssl@1.1.1w", "licenses": [{"license": {"id": "Apache-2.0"}}], "supplier": {"name": "OpenSSL Project"}}, {"type": "library", "name": "zlib", "version": "1.2.13", "purl": "pkg:generic/zlib@1.2.13", "licenses": [{"license": {"id": "Zlib"}}]}, {"type": "library", "name": "busybox", "version": "1.36.1", "purl": "pkg:generic/busybox@1.36.1", "licenses": [{"license": {"id": "GPL-2.0-only"}}]}, {"type": "framework", "name": "python", "version": "3.10.14", "purl": "pkg:generic/python@3.10.14", "licenses": [{"license": {"id": "PSF-2.0"}}]}, {"type": "library", "name": "requests", "version": "2.31.0", "purl": "pkg:pypi/requests@2.31.0", "licenses": [{"license": {"id": "Apache-2.0"}}]}, {"type": "library", "name": "numpy", "version": "1.26.4", "purl": "pkg:pypi/numpy@1.26.4", "licenses": [{"license": {"id": "BSD-3-Clause"}}]}, {"type": "library", "name": "flask", "version": "3.0.3", "purl": "pkg:pypi/flask@3.0.3", "licenses": [{"license": {"id": "BSD-3-Clause"}}]}, {"type": "operating-system", "name": "debian", "version": "11.9", "purl": "pkg:generic/debian@11.9"}]}'
+2026-07-10T13:27:48.0514766Z 
+2026-07-10T13:27:48.0514945Z /opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/pathlib.py:840: OSError
+2026-07-10T13:27:48.0515312Z =============================== warnings summary ===============================
+2026-07-10T13:27:48.0515717Z ../../../../../opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/fastapi/testclient.py:1
+2026-07-10T13:27:48.0516501Z   /opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+2026-07-10T13:27:48.0517195Z     from starlette.testclient import TestClient as TestClient  # noqa
+2026-07-10T13:27:48.0517403Z 
+2026-07-10T13:27:48.0517586Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-07-10T13:27:48.0517926Z =========================== short test summary info ============================
+2026-07-10T13:27:48.0521481Z FAILED tests/test_ingest.py::TestParseCycloneDX::test_parse_from_json_string - OSError: [Errno 36] File name too long: '{"bomFormat": "CycloneDX", "specVersion": "1.5", "serialNumber": "urn:uuid:sample-medical-device-001", "version": 1, "metadata": {"timestamp": "2026-07-10T12:00:00Z", "tools": [{"vendor": "anchore", "name": "syft", "version": "1.0.0"}], "component": {"type": "application", "name": "insulin-pump-firmware", "version": "2.3.1"}}, "components": [{"type": "library", "name": "openssl", "version": "1.1.1w", "purl": "pkg:generic/openssl@1.1.1w", "licenses": [{"license": {"id": "Apache-2.0"}}], "supplier": {"name": "OpenSSL Project"}}, {"type": "library", "name": "zlib", "version": "1.2.13", "purl": "pkg:generic/zlib@1.2.13", "licenses": [{"license": {"id": "Zlib"}}]}, {"type": "library", "name": "busybox", "version": "1.36.1", "purl": "pkg:generic/busybox@1.36.1", "licenses": [{"license": {"id": "GPL-2.0-only"}}]}, {"type": "framework", "name": "python", "version": "3.10.14", "purl": "pkg:generic/python@3.10.14", "licenses": [{"license": {"id": "PSF-2.0"}}]}, {"type": "library", "name": "requests", "version": "2.31.0", "purl": "pkg:pypi/requests@2.31.0", "licenses": [{"license": {"id": "Apache-2.0"}}]}, {"type": "library", "name": "numpy", "version": "1.26.4", "purl": "pkg:pypi/numpy@1.26.4", "licenses": [{"license": {"id": "BSD-3-Clause"}}]}, {"type": "library", "name": "flask", "version": "3.0.3", "purl": "pkg:pypi/flask@3.0.3", "licenses": [{"license": {"id": "BSD-3-Clause"}}]}, {"type": "operating-system", "name": "debian", "version": "11.9", "purl": "pkg:generic/debian@11.9"}]}'
+2026-07-10T13:27:48.0525249Z =================== 1 failed, 205 passed, 1 warning in 3.27s ===================
+2026-07-10T13:27:48.1303242Z ##[error]Process completed with exit code 1.
+2026-07-10T13:27:48.1403080Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-10T13:27:48.1404186Z Post job cleanup.
+2026-07-10T13:27:48.2066677Z [command]/usr/bin/git version
+2026-07-10T13:27:48.2134259Z git version 2.54.0
+2026-07-10T13:27:48.2174715Z Temporarily overriding HOME='/home/runner/work/_temp/d65871db-350d-4a1b-a19c-9d63df41d8ff' before making global git config changes
+2026-07-10T13:27:48.2175968Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-10T13:27:48.2176826Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MedSBOM/MedSBOM
+2026-07-10T13:27:48.2202108Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-10T13:27:48.2230620Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-10T13:27:48.2447168Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-10T13:27:48.2469785Z http.https://github.com/.extraheader
+2026-07-10T13:27:48.2478793Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-07-10T13:27:48.2506839Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-10T13:27:48.2717071Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-10T13:27:48.2748168Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-10T13:27:48.3070494Z Cleaning up orphan processes
+2026-07-10T13:27:48.3301034Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+

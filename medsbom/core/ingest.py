@@ -86,12 +86,28 @@ def _load_json(source: str | Path | dict[str, Any]) -> dict[str, Any]:
     if isinstance(source, dict):
         return source
 
-    path = Path(source) if not isinstance(source, Path) else source
-    if path.exists():
-        text = path.read_text(encoding="utf-8")
+    if isinstance(source, Path):
+        if not source.exists():
+            raise IngestError(f"File not found: {source}")
+        text = source.read_text(encoding="utf-8")
     elif isinstance(source, str):
-        # Might be a JSON string directly
-        text = source
+        # Check if it looks like a file path vs a JSON string
+        # JSON strings start with { or [; file paths don't
+        stripped = source.strip()
+        if stripped.startswith(("{", "[")):
+            text = source
+        elif len(source) < 1024:
+            path = Path(source)
+            try:
+                if path.exists():
+                    text = path.read_text(encoding="utf-8")
+                else:
+                    raise IngestError(f"File not found: {source}")
+            except OSError:
+                # Path too long or invalid — treat as JSON string
+                text = source
+        else:
+            text = source
     else:
         raise IngestError(f"File not found: {source}")
 
